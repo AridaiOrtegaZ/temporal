@@ -1,7 +1,6 @@
 function boton4() {
     window.alert('enviar4');
 }
-
 // definimos una variable la cual "apunta" a un elemento HTML identificado por su ID
 var btnEnviar1 = document.getElementById('btnEnviar1');
 btnEnviar1.style.color = "yellow";
