@@ -1,0 +1,13 @@
+<personas>
+<persona>
+<nombre></nombre>
+<direccion></direccion>
+<telefono></telefono>
+</persona>
+<persona>
+<nombre></nombre>
+<direccion></direccion>
+<telefono></telefono>
+<!-- </correo> entidad nula -->
+</persona>
+</personas>
