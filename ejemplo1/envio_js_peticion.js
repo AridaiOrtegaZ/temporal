@@ -76,10 +76,11 @@ btnPostJson.addEventListener("click", function () {
     console.log("{" + "name:'" + params.get("nombre") + "'," + "pass:'" + params.get("pass") + "'}");
     var params2 = "{" + "name:'" + params.get("nombre") + "'," + "pass:'" + params.get("pass") + "'}";  // forma de equívoca de construir el objeto, ya que le sobran las llaves
     var params3 =  "name:'" + params.get("nombre") + "'," + "pass:'" + params.get("pass") + "'";
-    axios.post("http://localhost:4567/holaJson", { "nombre": params.get("nombre"), pass: params.get("pass") } )
+    axios.post("http://localhost:4567/login", { "nombre": params.get("nombre"), pass: params.get("pass") } )
         .then(function (rs) {
             console.log(rs.data);
             //alert(rs.data)
+            window.location.replace("lista.html")
         })
         .catch(function (error) {
             console.log(error);
