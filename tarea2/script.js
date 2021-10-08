@@ -13,7 +13,7 @@ var users = [{
   type: 'admin'
 }, {
   id: 3,
-  username: 'supplier1',
+  username: 'aridai',
   password: 'c',
   type: 'supplier'
 }];
