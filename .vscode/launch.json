@@ -5,13 +5,33 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch VelocityExample",
+            "request": "launch",
+            "mainClass": "velocity.example.VelocityExample",
+            "projectName": "ejemploVelocity"
+        },
+        {
+            "type": "java",
+            "name": "Launch CreateScript",
+            "request": "launch",
+            "mainClass": "velocity.CreateScript",
+            "projectName": "ejemploVelocity"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "velocity.App",
+            "projectName": "ejemploVelocity"
+        },
+        {
             "name": "Attach to Chrome",
             "port": 9222,
             "request": "attach",
             "type": "pwa-chrome",
             "webRoot": "${workspaceFolder}"
         },
-
         {
             "type": "java",
             "name": "Launch Current File",

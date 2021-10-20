@@ -1,0 +1,9 @@
+<html>
+  <body>
+  #set( $foo = "Velocity" )
+  #foreach($u in $nombre)
+      Hola $u.email!
+      ¡Bienvenido! <br>
+  #end
+  </body>
+</html>
