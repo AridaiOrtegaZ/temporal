@@ -30,7 +30,6 @@ public class App
             if (accessControlRequestMethod != null) {
                 response.header("Access-Control-Allow-Methods", accessControlRequestMethod);
             }
-
             return "OK";
         });
 
@@ -52,6 +51,29 @@ public class App
             JsonObject respuesta = new JsonObject();
             respuesta.addProperty("status", dao.insertarUsuario(u));
             respuesta.addProperty("id", id);
+            return respuesta;
+        });
+
+        post("/usuarioE", (req, res) -> {
+             // Insertamos un nuevo usuario
+            String json = req.body();
+            Usuario u = gson.fromJson(json, Usuario.class);
+            //usuarios.put(id, u);
+
+            DAO dao = new DAO();
+            JsonObject respuesta = new JsonObject();
+            respuesta.addProperty("status", dao.eliminarUsuario(u));
+            return respuesta;
+        });
+
+        post("/usuarioM", (req, res) -> {
+            String json = req.body();
+            Usuario u = gson.fromJson(json, Usuario.class);
+            //usuarios.put(id, u);
+
+            DAO dao = new DAO();
+            JsonObject respuesta = new JsonObject();
+            respuesta.addProperty("status", dao.editarUsuario(u));
             return respuesta;
         });
         

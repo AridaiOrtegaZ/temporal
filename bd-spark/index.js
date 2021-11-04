@@ -12,6 +12,34 @@ btnRegistrar.addEventListener("click", () => {
         })
 });
 
+var btnEliminar = document.getElementById("btnEliminar");
+btnEliminar.addEventListener("click", () => {
+    axios.post("http://localhost:4567/usuarioE",{
+        email : document.getElementById("email").value
+    })
+    .then(function(res){
+        alert("Usuario eliminado" + res.data.status + " id:" + res.data.id);
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+});
+
+
+var btnEditar = document.getElementById("btnEditar");
+btnEditar.addEventListener("click",() => {
+    axios.post("http://localhost:4567/usuarioM",{
+        email : document.getElementById("email").value ,
+        password: document.getElementById("password").value        
+    })
+    .then(function(res){
+        alert("Usuario:" + res.data.status + " id:" + res.data.id);
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
+})
+
 var btnLista = document.getElementById("btnLista");
 btnLista.addEventListener("click", function () {
     axios.get("http://localhost:4567/usuarios")
@@ -29,4 +57,6 @@ btnLista.addEventListener("click", function () {
             }
         }
     })
-    .catch
+    .catch()
+})
+
